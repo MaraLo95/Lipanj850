@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervacije | Ranč Lipanj 850</title>
+    <meta name="description" content="Rezervišite jahanje ili smještaj u A-frame bungalovu na Ranču Lipanj 850">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body class="booking-page">
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">Ranč Lipanj</span>
+                <span class="logo-altitude">850</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="index.html#about">O nama</a></li>
+                <li><a href="index.html#services">Ture</a></li>
+                <li><a href="index.html#accommodation">Smještaj</a></li>
+                <li><a href="index.html#gallery">Galerija</a></li>
+                <li><a href="rezervacije.html" class="nav-cta active">Rezervacije</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-bg">
+            <img src="img/image00001.jpg" alt="Jahanje na zalasku sunca">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="page-header-content">
+            <h1>Rezervacije</h1>
+            <p>Odaberite uslugu, datum i rezervišite vaše nezaboravno iskustvo</p>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-intro">
+                <h2>Kako rezervisati?</h2>
+                <div class="booking-steps">
+                    <div class="booking-step">
+                        <div class="step-number">1</div>
+                        <h3>Odaberite uslugu</h3>
+                        <p>Izaberite jednu od naše 3 ponude</p>
+                    </div>
+                    <div class="booking-step">
+                        <div class="step-number">2</div>
+                        <h3>Izaberite datum</h3>
+                        <p>Kliknite na slobodan datum u kalendaru</p>
+                    </div>
+                    <div class="booking-step">
+                        <div class="step-number">3</div>
+                        <h3>Popunite formu</h3>
+                        <p>Unesite vaše podatke i pošaljite upit</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-grid">
+                <!-- Services Selection -->
+                <div class="booking-services">
+                    <h3>Naše usluge</h3>
+                    <div class="service-options">
+                        <label class="service-option">
+                            <input type="radio" name="selectedService" value="1" data-name="Rekreativno jahanje" data-price="50" data-duration="2 sata">
+                            <div class="service-option-content">
+                                <div class="service-option-header">
+                                    <h4>Rekreativno jahanje</h4>
+                                    <span class="service-option-price">50 <small>KM</small></span>
+                                </div>
+                                <p>Uživajte u dvosatnom jahanju kroz prelijepe planinske staze sa iskusnim vodičima.</p>
+                                <div class="service-option-meta">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 6v6l4 2"></path>
+                                    </svg>
+                                    <span>2 sata</span>
+                                </div>
+                            </div>
+                        </label>
+                        
+                        <label class="service-option">
+                            <input type="radio" name="selectedService" value="2" data-name="Jahanje + Prenoćište" data-price="150" data-duration="1 noć + 2h">
+                            <div class="service-option-content">
+                                <div class="service-option-header">
+                                    <h4>Jahanje + Prenoćište</h4>
+                                    <span class="service-option-price">150 <small>KM</small></span>
+                                </div>
+                                <p>Kompletno iskustvo: rekreativno jahanje i noćenje u A-Frame bungalovu sa domaćim doručkom.</p>
+                                <div class="service-option-meta">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 6v6l4 2"></path>
+                                    </svg>
+                                    <span>1 noć + 2h jahanja</span>
+                                </div>
+                            </div>
+                        </label>
+                        
+                        <label class="service-option">
+                            <input type="radio" name="selectedService" value="3" data-name="Prenoćište u bungalovu" data-price="100" data-duration="1 noć">
+                            <div class="service-option-content">
+                                <div class="service-option-header">
+                                    <h4>Prenoćište u bungalovu</h4>
+                                    <span class="service-option-price">100 <small>KM</small></span>
+                                </div>
+                                <p>A-Frame bungalov sa panoramskim pogledom, grijanjem na drva i domaćim doručkom.</p>
+                                <div class="service-option-meta">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 6v6l4 2"></path>
+                                    </svg>
+                                    <span>1 noć</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Calendar -->
+                <div class="booking-calendar">
+                    <h3>Odaberite datum</h3>
+                    <div class="calendar-wrapper">
+                        <div class="calendar-navigation">
+                            <button class="cal-nav-btn" id="prevMonth">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="15 18 9 12 15 6"/>
+                                </svg>
+                            </button>
+                            <span class="current-month" id="currentMonth">Februar 2026</span>
+                            <button class="cal-nav-btn" id="nextMonth">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="calendar-header">
+                            <div class="cal-day-name">Pon</div>
+                            <div class="cal-day-name">Uto</div>
+                            <div class="cal-day-name">Sri</div>
+                            <div class="cal-day-name">Čet</div>
+                            <div class="cal-day-name">Pet</div>
+                            <div class="cal-day-name">Sub</div>
+                            <div class="cal-day-name">Ned</div>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid">
+                            <!-- Popunjava se JavaScript-om -->
+                        </div>
+                        <div class="calendar-legend">
+                            <div class="legend-item">
+                                <span class="legend-dot available"></span>
+                                <span>Slobodno</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot limited"></span>
+                                <span>Ograničeno</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot unavailable"></span>
+                                <span>Zauzeto</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Time Slot Picker (za rekreativno jahanje) -->
+                        <div class="time-slots-wrapper" id="timeSlotsWrapper" style="display: none;">
+                            <h4>Odaberite termin</h4>
+                            <div class="time-slots" id="timeSlots">
+                                <!-- Popunjava se JavaScript-om -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="booking-form-wrapper">
+                    <h3>Vaši podaci</h3>
+                    <div class="selected-info" id="selectedInfo">
+                        <p class="no-selection">Molimo odaberite uslugu i datum iz kalendara</p>
+                    </div>
+                    <form class="booking-form" id="bookingForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="bookingName" name="name" placeholder=" " required disabled>
+                                <label for="bookingName">Ime i prezime *</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="bookingPhone" name="phone" placeholder=" " required disabled>
+                                <label for="bookingPhone">Telefon *</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="bookingEmail" name="email" placeholder=" " disabled>
+                                <label for="bookingEmail">Email (opciono)</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="bookingGuests" name="guests" min="1" max="10" value="1" placeholder=" " required disabled>
+                                <label for="bookingGuests">Broj osoba *</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="bookingMessage" name="message" rows="3" placeholder=" " disabled></textarea>
+                            <label for="bookingMessage">Dodatna poruka (opciono)</label>
+                        </div>
+                        <input type="hidden" id="bookingService" name="service">
+                        <input type="hidden" id="bookingDate" name="date">
+                        <input type="hidden" id="bookingTimeSlot" name="timeSlot">
+                        <p class="form-note">* Obavezna polja</p>
+                        <button type="submit" class="booking-submit-btn" disabled>
+                            <span>Pošalji rezervaciju</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13"/>
+                                <path d="M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="booking-contact">
+        <div class="container">
+            <div class="booking-contact-content">
+                <h3>Imate pitanja?</h3>
+                <p>Slobodno nas kontaktirajte telefonom ili emailom za sve dodatne informacije</p>
+                <div class="booking-contact-links">
+                    <a href="tel:+38765123456" class="contact-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        +387 65 XXX XXX
+                    </a>
+                    <a href="mailto:info@ranclipanj.ba" class="contact-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                        info@ranclipanj.ba
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Ranč Lipanj</span>
+                    <span class="logo-altitude">850</span>
+                </div>
+                <p class="footer-tagline">Bjekstvo u prirodu na 850m nadmorske visine</p>
+                <div class="footer-divider"></div>
+                <p class="footer-copy">&copy; 2026 Ranč Lipanj 850. Sva prava zadržana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="booking-modal" id="successModal">
+        <div class="booking-modal-content">
+            <div class="modal-icon success">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+            </div>
+            <h3>Rezervacija poslata!</h3>
+            <p>Vaš zahtjev za rezervaciju je uspješno poslat. Kontaktiraćemo vas uskoro radi potvrde.</p>
+            <button class="modal-close-btn" onclick="closeSuccessModal()">U redu</button>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>

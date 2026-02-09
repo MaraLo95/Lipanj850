@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava | Ranč Lipanj 850 Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            background: linear-gradient(135deg, #1A1612 0%, #2D251F 50%, #1A1612 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 30%, rgba(212, 168, 83, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 70%, rgba(139, 94, 60, 0.08) 0%, transparent 50%);
+            animation: gradientMove 20s ease-in-out infinite;
+        }
+
+        @keyframes gradientMove {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-5%, -5%); }
+        }
+
+        .login-container {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        .login-left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .login-right {
+            flex: 1;
+            background: url('img/image00009.jpg') center/cover no-repeat;
+            position: relative;
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            .login-right {
+                display: block;
+            }
+        }
+
+        .login-right::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26, 22, 18, 0.7) 0%, rgba(26, 22, 18, 0.4) 100%);
+        }
+
+        .login-right-content {
+            position: absolute;
+            bottom: 4rem;
+            left: 3rem;
+            right: 3rem;
+            color: white;
+        }
+
+        .login-right-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .login-right-content p {
+            font-size: 1rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 420px;
+            padding: 3rem;
+            background: rgba(255, 252, 247, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+        }
+
+        .login-logo {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: #FFFCF7;
+        }
+
+        .login-logo .logo-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+
+        .login-logo .logo-altitude {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #D4A853;
+            padding: 0.15rem 0.5rem;
+            border: 1px solid #D4A853;
+            border-radius: 2px;
+        }
+
+        .login-subtitle {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .login-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #FFFCF7;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-desc {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            font-family: inherit;
+            font-size: 1rem;
+            color: #FFFCF7;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-group input:focus {
+            border-color: #D4A853;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-options {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .remember-me input {
+            width: 18px;
+            height: 18px;
+            accent-color: #D4A853;
+            cursor: pointer;
+        }
+
+        .remember-me span {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .forgot-password {
+            font-size: 0.9rem;
+            color: #D4A853;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .forgot-password:hover {
+            opacity: 0.8;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 1rem;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: #1A1612;
+            background: #D4A853;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: #E5B964;
+            transform: translateY(-2px);
+        }
+
+        .login-btn:active {
+            transform: translateY(0);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #D4A853;
+        }
+
+        .back-link svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .error-message {
+            background: rgba(220, 38, 38, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            color: #FCA5A5;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-left">
+            <div class="login-box">
+                <div class="login-logo">
+                    <span class="logo-text">Ranč Lipanj</span>
+                    <span class="logo-altitude">850</span>
+                </div>
+                <p class="login-subtitle">Admin Panel</p>
+                
+                <h1 class="login-title">Dobrodošli nazad</h1>
+                <p class="login-desc">Prijavite se za pristup admin panelu</p>
+                
+                <div class="error-message" id="errorMessage">
+                    Pogrešno korisničko ime ili lozinka
+                </div>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Korisničko ime</label>
+                        <input type="text" id="username" name="username" placeholder="Unesite korisničko ime" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Lozinka</label>
+                        <input type="password" id="password" name="password" placeholder="Unesite lozinku" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember">
+                            <span>Zapamti me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Zaboravljena lozinka?</a>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">Prijavi se</button>
+                </form>
+                
+                <a href="index.html" class="back-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Nazad na sajt
+                </a>
+            </div>
+        </div>
+        
+        <div class="login-right">
+            <div class="login-right-content">
+                <h2>Upravljajte vašim rančom</h2>
+                <p>Pratite rezervacije, upravljajte uslugama i organizujte kalendar aktivnosti - sve na jednom mjestu.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="api.js"></script>
+    <script>
+        // Koristi API za prijavu, sa fallback na lokalne kredencijale
+        const FALLBACK_CREDENTIALS = {
+            username: 'admin',
+            password: 'ranc850'
+        };
+        
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+            const submitBtn = this.querySelector('button[type="submit"]');
+            
+            // Disable button during login
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Prijavljivanje...';
+            
+            try {
+                // Pokušaj prijavu putem API-ja
+                if (window.RancAPI) {
+                    await window.RancAPI.login(username, password);
+                    window.location.href = 'admin.html';
+                    return;
+                }
+            } catch (error) {
+                console.log('API login failed, trying fallback:', error);
+            }
+            
+            // Fallback na lokalne kredencijale
+            if (username === FALLBACK_CREDENTIALS.username && password === FALLBACK_CREDENTIALS.password) {
+                localStorage.setItem('ranc_admin_logged_in', 'true');
+                localStorage.setItem('ranc_admin_user', 'Administrator');
+                window.location.href = 'admin.html';
+            } else {
+                errorMessage.classList.add('show');
+                document.getElementById('password').value = '';
+            }
+            
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Prijavi se';
+        });
+        
+        // Sakrij error poruku kada korisnik počne kucati
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', () => {
+                document.getElementById('errorMessage').classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
+
