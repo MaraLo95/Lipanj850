@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranč Lipanj 850 | Jahanje i Smještaj u Prirodi</title>
+    <meta name="description" content="Ranč Lipanj 850 - jahanje, A-frame bungalovi, domaća hrana i netaknuta priroda na 850m nadmorske visine u selu Sekovići kod Zvornika, BiH">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="img/logoranclipanj.jpg" alt="Ranč Lipanj 850 Logo" class="nav-logo-img">
+                <span class="logo-text">Ranč Lipanj</span>
+                <span class="logo-altitude">850</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Početna</a></li>
+                <li><a href="#about">O nama</a></li>
+                <li><a href="#services">Ture</a></li>
+                <li><a href="#accommodation">Smještaj</a></li>
+                <li><a href="#gallery">Galerija</a></li>
+                <li><a href="rezervacije.html" class="nav-cta">Rezervacije</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-bg">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="img/homevideo.mp4" type="video/mp4">
+                <!-- Fallback slika ako video ne radi -->
+                <img src="img/image00001.jpg" alt="Jahanje na zalasku sunca">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Netaknuta priroda na 850m nadmorske visine</p>
+            <h1 class="hero-title">Ranč Lipanj</h1>
+            <p class="hero-tagline">Jahanje • Bungalovi • Domaća hrana</p>
+            <div class="hero-location">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Sekovići, Zvornik, BiH</span>
+            </div>
+            <a href="#services" class="hero-btn">Istraži ponudu</a>
+        </div>
+        <div class="hero-scroll">
+            <span>Skroluj</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img-main">
+                        <img src="img/image00003.jpg" alt="Vlasnik sa konjem">
+                    </div>
+                    <div class="about-img-secondary">
+                        <img src="img/image00009.jpg" alt="A-frame bungalov iznad oblaka">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-label">O nama</span>
+                    <h2 class="section-title">Bjekstvo u prirodu</h2>
+                    <p class="about-text">
+                        Ranč Lipanj se nalazi na <strong>850 metara nadmorske visine</strong> u slikovitom selu Sekovići kod Zvornika. Okruženi netaknutom prirodom, nudimo jedinstveno iskustvo jahanja kroz planinske pejzaže sa pogledom koji oduzima dah.
+                    </p>
+                    <p class="about-text">
+                        Vlasnik Sloba brine o <strong>6 konja</strong>, uključujući i nedavno pridošlog čistokrvnog arapskog konja. Ovdje ćete uživati u potpunom miru, daleko od civilizacije. Uz prelep ambijent očekuje Vas i <strong>domaća organska hrana</strong>.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                    <path d="M2 17l10 5 10-5"></path>
+                                    <path d="M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                            <span>850m n.v.</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 6v6l4 2"></path>
+                                </svg>
+                            </div>
+                            <span>6 konja</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                            </div>
+                            <span>A-frame smještaj</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Naša ponuda</span>
+                <h2 class="section-title">Ture jahanja</h2>
+                <p class="section-desc">Izaberite avanturu koja vam odgovara - od početničkih časova do panoramskih tura</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1: Rekreativno jahanje -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/image00005.jpg" alt="Rekreativno jahanje">
+                        <div class="service-badge">Najpopularnije</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Rekreativno jahanje</h3>
+                        <p>Uživajte u dvosatnom jahanju kroz prelijepe planinske staze sa iskusnim vodičima. Idealno za opuštanje i uživanje u prirodi.</p>
+                        <div class="service-meta">
+                            <div class="service-duration">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 6v6l4 2"></path>
+                                </svg>
+                                <span>2 sata</span>
+                            </div>
+                            <div class="service-price">50 <small>KM</small></div>
+                        </div>
+                        <a href="rezervacije.html" class="service-btn">Rezerviši</a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Jahanje + Prenoćište -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/image00002.jpg" alt="Jahanje i smještaj">
+                        <div class="service-badge premium">Komplet</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Jahanje + Prenoćište</h3>
+                        <p>Kompletno iskustvo koje uključuje rekreativno jahanje (2h) i noćenje u našem A-Frame bungalovu sa domaćim doručkom.</p>
+                        <div class="service-meta">
+                            <div class="service-duration">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 6v6l4 2"></path>
+                                </svg>
+                                <span>1 noć + 2h</span>
+                            </div>
+                            <div class="service-price">150 <small>KM</small></div>
+                        </div>
+                        <a href="rezervacije.html" class="service-btn">Rezerviši</a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Samo prenoćište -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/image00007.jpg" alt="A-frame bungalov">
+                    </div>
+                    <div class="service-content">
+                        <h3>Prenoćište u bungalovu</h3>
+                        <p>A-Frame bungalov sa panoramskim pogledom na planine, grijanjem na drva i domaćim doručkom. Savršeno za bijeg od svakodnevice.</p>
+                        <div class="service-meta">
+                            <div class="service-duration">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 6v6l4 2"></path>
+                                </svg>
+                                <span>1 noć</span>
+                            </div>
+                            <div class="service-price">100 <small>KM</small></div>
+                        </div>
+                        <a href="rezervacije.html" class="service-btn">Rezerviši</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Banner -->
+    <section class="experience-banner">
+        <div class="experience-bg">
+            <img src="img/image00004.jpg" alt="Logorska vatra sa pogledom">
+        </div>
+        <div class="experience-content">
+            <h2>Doživite planinski mir</h2>
+            <p>Hiking staze, manastiri Papraća i Lovnica, pogled koji puca na planine</p>
+        </div>
+    </section>
+
+    <!-- Accommodation Section -->
+    <section class="accommodation" id="accommodation">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Smještaj</span>
+                <h2 class="section-title">A-Frame bungalovi</h2>
+                <p class="section-desc">Jedinstveni smještaj sa pogledom koji oduzima dah - probudite se iznad oblaka</p>
+            </div>
+            <div class="accommodation-grid">
+                <div class="accommodation-main">
+                    <img src="img/image00007.jpg" alt="A-frame bungalov enterijер">
+                </div>
+                <div class="accommodation-secondary">
+                    <img src="img/image00008.jpg" alt="A-frame bungalov spavaća soba">
+                </div>
+                <div class="accommodation-features">
+                    <h3>Rustični luksuz</h3>
+                    <ul class="feature-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Panoramski pogled na planine
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Grijanje na drva
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Privatna terasa
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Domaći doručak
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Potpuni mir i tišina
+                        </li>
+                    </ul>
+                    <a href="#contact" class="accommodation-btn">Rezerviši smještaj</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Section -->
+    <section class="food">
+        <div class="container">
+            <div class="food-grid">
+                <div class="food-content">
+                    <span class="section-label">Gastro doživljaj</span>
+                    <h2 class="section-title">Domaća hrana</h2>
+                    <p>
+                        Uživajte u autentičnim bosanskim specijalitetima pripremljenim na tradicionalan način. 
+                        Pita ispod sača, domaći kajmak, svježe povrće iz bašte i druge delicije čekaju vas.
+                    </p>
+                    <div class="food-highlights">
+                        <span>Pita ispod sača</span>
+                        <span>Domaći kajmak</span>
+                        <span>Svježe povrće</span>
+                        <span>Planinski med</span>
+                    </div>
+                </div>
+                <div class="food-image">
+                    <img src="img/image000010.jpg" alt="Domaća pita ispod sača">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section class="attractions" id="attractions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Samo kod nas</span>
+                <h2 class="section-title">Vidjeti u našem kraju</h2>
+            </div>
+            <div class="attractions-intro">
+                <p>
+                    Boravak na Ranču Lipanj 850 nije samo odmor u prirodi – to je prilika da upoznate neke od najljepših i najautentičnijih lokaliteta istočne Bosne. U neposrednoj blizini ranča nalaze se mjesta koja spajaju netaknutu prirodu, bogatu istoriju i mir koji se danas rijetko nalazi.
+                </p>
+            </div>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <div class="attraction-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
+                            <path d="M9 9h.01M15 9h.01M12 9h.01M9 13h.01M15 13h.01M12 13h.01"/>
+                        </svg>
+                    </div>
+                    <h3>Manastir Papraća</h3>
+                    <span class="attraction-meta">16. vijek</span>
+                    <p>Smješten u zelenoj dolini nedaleko od Šekovića, jedno je od najznačajnijih duhovnih i istorijskih mjesta ovog kraja. Okružen šumom i tišinom, savršen je za laganu šetnju i trenutke potpune relaksacije.</p>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
+                            <path d="M9 9h.01M15 9h.01M12 9h.01M9 13h.01M15 13h.01M12 13h.01"/>
+                        </svg>
+                    </div>
+                    <h3>Manastir Lovnica</h3>
+                    <span class="attraction-meta">1576. godina</span>
+                    <p>Skriven među brdima i potocima, mjesto koje oduševljava svojom autentičnošću i skladom sa prirodom. Idealna destinacija za izlet i kratki bijeg od svakodnevice.</p>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 12c2-4 6-7 10-7s8 3 10 7-6 7-10 7-8-3-10-7z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Zvorničko jezero</h3>
+                    <span class="attraction-meta">Prirodna oaza</span>
+                    <p>Pruža brojne mogućnosti – od šetnje uz obalu i piknika, do kupanja i uživanja u zalascima sunca. Savršeno mjesto za opuštanje i porodične izlete.</p>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Zvornička tvrđava</h3>
+                    <span class="attraction-meta">Đurđev grad</span>
+                    <p>Uzdiže se iznad grada sa impresivnim pogledom na Drinu i okolna brda. Šetnja do tvrđave i boravak na vidikovcu nezaobilazni su za sve koji žele doživjeti duh prošlih vremena.</p>
+                </div>
+            </div>
+            <div class="attractions-cta">
+                <div class="attraction-highlight">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <p>Za one koji traže potpuni mir i prirodni ambijent, <strong>Ranč Lipanj 850</strong> nudi ušuškanost od gradske buke i dobre planinarske staze za prave ljubitelje prirode.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Galerija</span>
+                <h2 class="section-title">Ulovljeni trenuci</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="img/image00001.jpg" alt="Jahanje na zalasku sunca">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/image00011.jpeg" alt="Ranč Lipanj">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/image00012.jpeg" alt="Konji na ranču">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="img/image00009.jpg" alt="Bungalov iznad oblaka">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/image00013.jpeg" alt="Planinski pejzaž">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/image00014.jpeg" alt="Jahanje kroz šumu">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="img/image00015.jpeg" alt="Panorama ranča">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/image00016.jpeg" alt="Konji na ispaši">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/image00017.jpeg" alt="Zalazak sunca">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/image00018.jpeg" alt="Ranč u prirodi">
+                </div>
+                <div class="gallery-item large">
+                    <img src="img/image00019.jpeg" alt="Avantura na konjima">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/image00020.jpeg" alt="Planinska staza">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-label">Kontakt</span>
+                    <h2 class="section-title">Rezervišite vaše iskustvo</h2>
+                    <p>Javite nam se za rezervacije tura, smještaja ili bilo kakva pitanja. Radujemo se vašem dolasku!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Lokacija</strong>
+                                <span>Sekovići, Zvornik, BiH</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Telefon</strong>
+                                <span>+387 65 XXX XXX</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Email</strong>
+                                <span>info@ranclipanj.ba</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Ime i prezime</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email adresa</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone">
+                            <label for="phone">Telefon</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected></option>
+                                <option value="rekreativno" data-price="50" data-nights="false">Rekreativno jahanje (2h - 50 KM)</option>
+                                <option value="jahanje-prenociste" data-price="150" data-nights="true">Jahanje + Prenoćište (150 KM/noć)</option>
+                                <option value="prenociste" data-price="100" data-nights="true">Prenoćište u bungalovu (100 KM/noć)</option>
+                                <option value="ostalo" data-price="0" data-nights="false">Ostalo</option>
+                            </select>
+                            <label for="service">Zainteresovan/a sam za</label>
+                        </div>
+                        
+                        <!-- Date Range Picker za prenoćište -->
+                        <div class="date-picker-container" id="datePickerContainer" style="display: none;">
+                            <div class="date-picker-header">
+                                <span class="date-picker-title">Odaberite datume boravka</span>
+                                <div class="date-selection-info">
+                                    <span id="dateSelectionHint">Kliknite na datum dolaska</span>
+                                </div>
+                            </div>
+                            <div class="calendar-navigation">
+                                <button type="button" class="calendar-nav-btn" id="prevMonth">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                    </svg>
+                                </button>
+                                <span class="calendar-month-year" id="calendarMonthYear"></span>
+                                <button type="button" class="calendar-nav-btn" id="nextMonth">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="calendar-grid">
+                                <div class="calendar-weekdays">
+                                    <span>Pon</span>
+                                    <span>Uto</span>
+                                    <span>Sri</span>
+                                    <span>Čet</span>
+                                    <span>Pet</span>
+                                    <span>Sub</span>
+                                    <span>Ned</span>
+                                </div>
+                                <div class="calendar-days" id="calendarDays"></div>
+                            </div>
+                            <div class="date-summary" id="dateSummary" style="display: none;">
+                                <div class="date-summary-dates">
+                                    <div class="date-summary-item">
+                                        <span class="date-label">Dolazak:</span>
+                                        <span class="date-value" id="checkInDate">-</span>
+                                    </div>
+                                    <div class="date-summary-arrow">→</div>
+                                    <div class="date-summary-item">
+                                        <span class="date-label">Odlazak:</span>
+                                        <span class="date-value" id="checkOutDate">-</span>
+                                    </div>
+                                </div>
+                                <div class="date-summary-total">
+                                    <span class="nights-count" id="nightsCount">0 noćenja</span>
+                                    <span class="total-price" id="totalPrice">0 KM</span>
+                                </div>
+                                <button type="button" class="clear-dates-btn" id="clearDates">Poništi odabir</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Poruka</label>
+                        </div>
+                        <button type="submit" class="form-btn">Pošalji upit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Ranč Lipanj</span>
+                    <span class="logo-altitude">850</span>
+                </div>
+                <p class="footer-tagline">Bjekstvo u prirodu na 850m nadmorske visine</p>
+                <div class="footer-divider"></div>
+                <p class="footer-copy">&copy; 2026 Ranč Lipanj 850. Sva prava zadržana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Zatvori">&times;</button>
+        <button class="lightbox-prev" aria-label="Prethodna">&#10094;</button>
+        <button class="lightbox-next" aria-label="Sljedeća">&#10095;</button>
+        <img src="" alt="" class="lightbox-image">
+    </div>
+
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

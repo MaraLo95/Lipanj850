@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | Ranč Lipanj 850</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <span class="logo-text">Ranč Lipanj</span>
+                <span class="logo-altitude">850</span>
+            </div>
+            <button class="sidebar-close" id="sidebarClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="9"/>
+                    <rect x="14" y="3" width="7" height="5"/>
+                    <rect x="14" y="12" width="7" height="9"/>
+                    <rect x="3" y="16" width="7" height="5"/>
+                </svg>
+                <span>Dashboard</span>
+            </a>
+            <a href="#usluge" class="nav-item" data-section="usluge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+                <span>Usluge</span>
+            </a>
+            <a href="#kalendar" class="nav-item" data-section="kalendar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <span>Kalendar</span>
+            </a>
+            <a href="#rezervacije" class="nav-item" data-section="rezervacije">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                    <path d="M9 14l2 2 4-4"/>
+                </svg>
+                <span>Rezervacije</span>
+            </a>
+            <a href="#galerija" class="nav-item" data-section="galerija">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                </svg>
+                <span>Galerija</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="index.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                <span>Nazad na sajt</span>
+            </a>
+            <button class="nav-item logout-btn" id="logoutBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                    <polyline points="16 17 21 12 16 7"/>
+                    <line x1="21" y1="12" x2="9" y2="12"/>
+                </svg>
+                <span>Odjavi se</span>
+            </button>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="top-header">
+            <button class="menu-toggle" id="menuToggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+            <h1 class="page-title" id="pageTitle">Dashboard</h1>
+            <div class="header-right">
+                <div class="user-info">
+                    <span class="user-name" id="userName">Admin</span>
+                    <div class="user-avatar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Dashboard Section -->
+        <section class="content-section active" id="section-dashboard">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon reservations">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-value" id="totalReservations">12</span>
+                        <span class="stat-label">Ukupno rezervacija</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon pending">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-value" id="pendingReservations">5</span>
+                        <span class="stat-label">Na čekanju</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon services">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-value" id="activeServices">4</span>
+                        <span class="stat-label">Aktivne usluge</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon revenue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-value">1,250 <small>KM</small></span>
+                        <span class="stat-label">Ovaj mjesec</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="card recent-reservations">
+                    <div class="card-header">
+                        <h3>Nedavne rezervacije</h3>
+                        <a href="#rezervacije" class="view-all" data-section="rezervacije">Vidi sve</a>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Gost</th>
+                                    <th>Usluga</th>
+                                    <th>Datum</th>
+                                    <th>Cijena</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recentReservationsTable">
+                                <!-- Popunjava se JavaScript-om -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card upcoming-events">
+                    <div class="card-header">
+                        <h3>Nadolazeći događaji</h3>
+                        <a href="#kalendar" class="view-all" data-section="kalendar">Vidi kalendar</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="event-list" id="upcomingEvents">
+                            <!-- Popunjava se JavaScript-om -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Usluge Section -->
+        <section class="content-section" id="section-usluge">
+            <div class="section-header-bar">
+                <h2>Upravljanje uslugama</h2>
+                <button class="btn btn-primary" id="addServiceBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"/>
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                    Dodaj uslugu
+                </button>
+            </div>
+            
+            <div class="services-grid" id="servicesGrid">
+                <!-- Popunjava se JavaScript-om -->
+            </div>
+        </section>
+        
+        <!-- Kalendar Section -->
+        <section class="content-section" id="section-kalendar">
+            <div class="section-header-bar">
+                <h2>Kalendar rezervacija</h2>
+                <div class="calendar-nav">
+                    <button class="btn btn-icon" id="prevMonth">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"/>
+                        </svg>
+                    </button>
+                    <span class="current-month" id="currentMonth">Februar 2026</span>
+                    <button class="btn btn-icon" id="nextMonth">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <div class="calendar-day-name">Pon</div>
+                    <div class="calendar-day-name">Uto</div>
+                    <div class="calendar-day-name">Sri</div>
+                    <div class="calendar-day-name">Čet</div>
+                    <div class="calendar-day-name">Pet</div>
+                    <div class="calendar-day-name">Sub</div>
+                    <div class="calendar-day-name">Ned</div>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Popunjava se JavaScript-om -->
+                </div>
+            </div>
+            
+            <div class="calendar-legend">
+                <div class="legend-item">
+                    <span class="legend-dot confirmed"></span>
+                    <span>Potvrđeno</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot pending"></span>
+                    <span>Na čekanju</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot cancelled"></span>
+                    <span>Otkazano</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Galerija Section -->
+        <section class="content-section" id="section-galerija">
+            <div class="section-header-bar">
+                <h2>Upravljanje galerijom</h2>
+                <button class="btn btn-primary" id="addImageBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"/>
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                    Dodaj sliku
+                </button>
+            </div>
+            
+            <div class="gallery-info">
+                <p>Slike koje dodate ovdje će biti prikazane u galeriji na glavnom sajtu. Možete ih reorganizovati prevlačenjem ili urediti njihove opise.</p>
+            </div>
+            
+            <div class="admin-gallery-grid" id="adminGalleryGrid">
+                <!-- Popunjava se JavaScript-om -->
+            </div>
+        </section>
+        
+        <!-- Rezervacije Section -->
+        <section class="content-section" id="section-rezervacije">
+            <div class="section-header-bar">
+                <h2>Sve rezervacije</h2>
+                <div class="filter-group">
+                    <select class="filter-select" id="statusFilter">
+                        <option value="all">Svi statusi</option>
+                        <option value="pending">Na čekanju</option>
+                        <option value="confirmed">Potvrđeno</option>
+                        <option value="cancelled">Otkazano</option>
+                    </select>
+                    <select class="filter-select" id="serviceFilter">
+                        <option value="all">Sve usluge</option>
+                        <option value="rekreativno">Rekreativno jahanje</option>
+                        <option value="jahanje-prenociste">Jahanje + Prenoćište</option>
+                        <option value="prenociste">Prenoćište u bungalovu</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-body">
+                    <table class="data-table full-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Gost</th>
+                                <th>Email</th>
+                                <th>Telefon</th>
+                                <th>Usluga</th>
+                                <th>Datum</th>
+                                <th>Cijena</th>
+                                <th>Status</th>
+                                <th>Akcije</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservationsTable">
+                            <!-- Popunjava se JavaScript-om -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modal za dodavanje termina jahanja -->
+    <div class="modal" id="addSlotModal">
+        <div class="modal-content modal-sm">
+            <div class="modal-header">
+                <h3>Dodaj termin jahanja</h3>
+                <button class="modal-close" id="closeSlotModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <form id="addSlotForm">
+                <div class="slot-date-display">
+                    <span class="slot-label">Datum:</span>
+                    <span class="slot-value" id="slotDateDisplay">-</span>
+                </div>
+                <input type="hidden" id="slotDate" name="date">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="slotTime">Vrijeme početka</label>
+                        <input type="time" id="slotTime" name="time" value="10:00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="slotCount">Broj mjesta</label>
+                        <input type="number" id="slotCount" name="slots" min="1" max="10" value="3" required>
+                    </div>
+                </div>
+                
+                <p class="slot-info">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 16v-4"/>
+                        <path d="M12 8h.01"/>
+                    </svg>
+                    Ovi termini će biti prikazani korisnicima na stranici za rezervacije.
+                </p>
+                
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelSlotBtn">Otkaži</button>
+                    <button type="submit" class="btn btn-primary">Dodaj termin</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Modal za prikaz detalja termina -->
+    <div class="modal" id="slotDetailsModal">
+        <div class="modal-content modal-sm">
+            <div class="modal-header">
+                <h3>Termini jahanja</h3>
+                <button class="modal-close" id="closeSlotDetailsModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="slotDetailsContent">
+                <!-- Popunjava se JavaScript-om -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal za dodavanje/uređivanje usluge -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="serviceModalTitle">Dodaj novu uslugu</h3>
+                <button class="modal-close" id="closeServiceModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <form id="serviceForm">
+                <div class="form-group">
+                    <label for="serviceName">Naziv usluge</label>
+                    <input type="text" id="serviceName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceDescription">Opis</label>
+                    <textarea id="serviceDescription" name="description" rows="3"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="serviceDuration">Trajanje</label>
+                        <input type="text" id="serviceDuration" name="duration" placeholder="npr. 3 sata">
+                    </div>
+                    <div class="form-group">
+                        <label for="servicePrice">Cijena (KM)</label>
+                        <input type="number" id="servicePrice" name="price" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="serviceActive" name="active" checked>
+                        <span>Aktivna usluga</span>
+                    </label>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelServiceBtn">Otkaži</button>
+                    <button type="submit" class="btn btn-primary">Sačuvaj</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Modal za dodavanje rezervacije sa kalendara -->
+    <div class="modal" id="addReservationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Dodaj novu rezervaciju</h3>
+                <button class="modal-close" id="closeAddReservationModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <form id="addReservationForm">
+                <div class="form-group">
+                    <label for="reservationName">Ime i prezime gosta <span class="required">*</span></label>
+                    <input type="text" id="reservationName" name="name" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reservationEmail">Email</label>
+                        <input type="email" id="reservationEmail" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="reservationPhone">Telefon</label>
+                        <input type="tel" id="reservationPhone" name="phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reservationService">Usluga <span class="required">*</span></label>
+                    <select id="reservationService" name="service" required>
+                        <!-- Popunjava se JavaScript-om -->
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reservationStartDate">Datum početka <span class="required">*</span></label>
+                        <input type="date" id="reservationStartDate" name="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reservationEndDate">Datum kraja <span class="required">*</span></label>
+                        <input type="date" id="reservationEndDate" name="endDate" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reservationStatus">Status</label>
+                    <select id="reservationStatus" name="status">
+                        <option value="pending">Na čekanju</option>
+                        <option value="confirmed">Potvrđeno</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reservationMessage">Napomena</label>
+                    <textarea id="reservationMessage" name="message" rows="2"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelAddReservationBtn">Otkaži</button>
+                    <button type="submit" class="btn btn-primary">Dodaj rezervaciju</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Modal za dodavanje/uređivanje slike -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <h3 id="imageModalTitle">Dodaj novu sliku</h3>
+                <button class="modal-close" id="closeImageModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <form id="imageForm">
+                <div class="image-upload-area" id="imageUploadArea">
+                    <div class="upload-placeholder" id="uploadPlaceholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <p>Prevucite sliku ovdje ili kliknite za odabir</p>
+                        <span>PNG, JPG ili WEBP (max 5MB)</span>
+                    </div>
+                    <img id="imagePreview" class="image-preview" src="" alt="Preview">
+                    <input type="file" id="imageFile" name="image" accept="image/*" hidden>
+                </div>
+                
+                <div class="form-group">
+                    <label for="imageTitle">Naslov slike</label>
+                    <input type="text" id="imageTitle" name="title" placeholder="npr. Jahanje na zalasku sunca">
+                </div>
+                
+                <div class="form-group">
+                    <label for="imageAlt">Alt tekst (za SEO)</label>
+                    <input type="text" id="imageAlt" name="alt" placeholder="Opis slike za pretraživače">
+                </div>
+                
+                <div class="form-group">
+                    <label for="imageCategory">Kategorija</label>
+                    <select id="imageCategory" name="category">
+                        <option value="jahanje">Jahanje</option>
+                        <option value="smjestaj">Smještaj</option>
+                        <option value="priroda">Priroda</option>
+                        <option value="hrana">Hrana</option>
+                        <option value="ostalo">Ostalo</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="imageVisible" name="visible" checked>
+                        <span>Prikaži na sajtu</span>
+                    </label>
+                </div>
+                
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelImageBtn">Otkaži</button>
+                    <button type="submit" class="btn btn-primary">Sačuvaj</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+    <!-- Modal za pregled/uređivanje rezervacije -->
+    <div class="modal" id="reservationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Detalji rezervacije</h3>
+                <button class="modal-close" id="closeReservationModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="reservation-details" id="reservationDetails">
+                <!-- Popunjava se JavaScript-om -->
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-danger" id="cancelReservationBtn">Otkaži rezervaciju</button>
+                <button type="button" class="btn btn-success" id="confirmReservationBtn">Potvrdi</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="api.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
+
