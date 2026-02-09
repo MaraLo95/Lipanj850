@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* ============================================
    RANČ LIPANJ 850 - Booking Page Styles
    ============================================ */
@@ -826,6 +827,835 @@
     background: var(--color-dark);
 }
 
+=======
+/* ============================================
+   RANČ LIPANJ 850 - Booking Page Styles
+   ============================================ */
+
+/* CSS Variables for Booking Page */
+:root {
+    --color-dark: #1A1612;
+    --color-dark-soft: #2D251F;
+    --color-cream: #FFFCF7;
+    --color-cream-light: #FFFFFF;
+    --color-stone: #C5B9A8;
+    --color-stone-light: #DDD4C7;
+    --color-gold: #D4A853;
+    --color-gold-light: #E5B964;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Outfit', -apple-system, sans-serif;
+}
+
+/* Page Header */
+.page-header {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-cream);
+    overflow: hidden;
+}
+
+.page-header-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.page-header-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-header-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(26, 22, 18, 0.6) 0%,
+        rgba(26, 22, 18, 0.8) 100%
+    );
+}
+
+.page-header-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 2rem;
+}
+
+.page-header-content h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.page-header-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Booking Section */
+.booking-section {
+    padding: 5rem 0;
+    background: var(--color-dark);
+}
+
+.booking-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.booking-intro h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--color-cream);
+    margin-bottom: 2rem;
+}
+
+.booking-steps {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.booking-step {
+    text-align: center;
+    max-width: 200px;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--color-gold);
+    color: var(--color-dark);
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.booking-step h3 {
+    font-size: 1.1rem;
+    color: var(--color-cream);
+    margin-bottom: 0.5rem;
+}
+
+.booking-step p {
+    font-size: 0.9rem;
+    color: var(--color-stone-light);
+}
+
+/* Booking Grid */
+.booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .booking-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .booking-form-wrapper {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .booking-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Services Selection */
+.booking-services h3,
+.booking-calendar h3,
+.booking-form-wrapper h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-cream);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.service-option {
+    cursor: pointer;
+}
+
+.service-option input {
+    display: none;
+}
+
+.service-option-content {
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.service-option:hover .service-option-content {
+    border-color: rgba(212, 168, 83, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.service-option input:checked + .service-option-content {
+    border-color: var(--color-gold);
+    background: rgba(212, 168, 83, 0.1);
+}
+
+.service-option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.service-option-header h4 {
+    font-size: 1.1rem;
+    color: var(--color-cream);
+    font-weight: 500;
+}
+
+.service-option-price {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+.service-option-price small {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.service-option-content p {
+    font-size: 0.9rem;
+    color: var(--color-stone-light);
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.service-option-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-gold);
+}
+
+.service-option-meta svg {
+    opacity: 0.8;
+}
+
+/* Calendar */
+.calendar-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.calendar-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.cal-nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-cream);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.cal-nav-btn:hover {
+    background: var(--color-gold);
+    color: var(--color-dark);
+    border-color: var(--color-gold);
+}
+
+.current-month {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--color-cream);
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.cal-day-name {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-stone-light);
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.cal-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--color-cream);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.cal-day:hover:not(.other-month):not(.unavailable):not(.past) {
+    background: rgba(212, 168, 83, 0.2);
+}
+
+.cal-day.other-month {
+    color: rgba(255, 255, 255, 0.2);
+    cursor: default;
+}
+
+.cal-day.past {
+    color: rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+}
+
+.cal-day.today {
+    background: rgba(212, 168, 83, 0.15);
+    font-weight: 600;
+}
+
+.cal-day.available::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+}
+
+.cal-day.limited::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fbbf24;
+}
+
+.cal-day.unavailable {
+    color: rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+}
+
+.cal-day.unavailable::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ef4444;
+}
+
+.cal-day.selected {
+    background: var(--color-gold);
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.cal-day.selected::after {
+    display: none;
+}
+
+.calendar-legend {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.calendar-message {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: rgba(212, 168, 83, 0.1);
+    border: 1px solid rgba(212, 168, 83, 0.2);
+    border-radius: 8px;
+}
+
+.calendar-message p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-gold);
+}
+
+.calendar-message.warning {
+    background: rgba(251, 191, 36, 0.1);
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+.calendar-message.warning p {
+    color: #fbbf24;
+}
+
+.cal-day:not(.available):not(.limited):not(.unavailable):not(.past):not(.other-month) {
+    opacity: 0.5;
+    cursor: default;
+}
+
+/* Time Slots Picker */
+.time-slots-wrapper {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.time-slots-wrapper h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    color: var(--color-cream);
+    margin-bottom: 1rem;
+}
+
+.time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.time-slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 100px;
+}
+
+.time-slot:hover {
+    background: rgba(212, 168, 83, 0.1);
+    border-color: rgba(212, 168, 83, 0.3);
+}
+
+.time-slot.selected {
+    background: rgba(212, 168, 83, 0.2);
+    border-color: var(--color-gold);
+}
+
+.time-slot.unavailable {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.time-slot .slot-time {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-cream);
+}
+
+.time-slot .slot-available {
+    font-size: 0.75rem;
+    color: var(--color-stone-light);
+    margin-top: 0.25rem;
+}
+
+.time-slot.selected .slot-time {
+    color: var(--color-gold);
+}
+
+.time-slot.selected .slot-available {
+    color: var(--color-gold);
+}
+
+.time-slots-message {
+    font-size: 0.9rem;
+    color: var(--color-stone-light);
+    font-style: italic;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--color-stone-light);
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.legend-dot.available {
+    background: #4ade80;
+}
+
+.legend-dot.limited {
+    background: #fbbf24;
+}
+
+.legend-dot.unavailable {
+    background: #ef4444;
+}
+
+/* Booking Form */
+.booking-form-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.selected-info {
+    background: rgba(212, 168, 83, 0.1);
+    border: 1px solid rgba(212, 168, 83, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.selected-info .no-selection {
+    color: var(--color-stone-light);
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
+}
+
+.selected-info.active {
+    background: rgba(212, 168, 83, 0.15);
+    border-color: var(--color-gold);
+}
+
+.selected-info .selection-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.selected-info .selection-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.selected-info .selection-label {
+    color: var(--color-stone-light);
+}
+
+.selected-info .selection-value {
+    color: var(--color-cream);
+    font-weight: 500;
+}
+
+.selected-info .selection-total {
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(212, 168, 83, 0.3);
+}
+
+.selected-info .selection-total .selection-value {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--color-gold);
+}
+
+.booking-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 480px) {
+    .booking-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.booking-form .form-group {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.booking-form input,
+.booking-form textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: var(--color-cream);
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    transition: all 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: var(--color-gold);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.booking-form input:disabled,
+.booking-form textarea:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.booking-form label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-stone-light);
+    font-size: 0.95rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.booking-form textarea + label {
+    top: 1rem;
+    transform: none;
+}
+
+.booking-form input:focus + label,
+.booking-form input:not(:placeholder-shown) + label,
+.booking-form textarea:focus + label,
+.booking-form textarea:not(:placeholder-shown) + label {
+    top: -0.5rem;
+    left: 0.75rem;
+    font-size: 0.75rem;
+    background: var(--color-dark);
+    padding: 0 0.25rem;
+    color: var(--color-gold);
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+    color: transparent;
+}
+
+.form-note {
+    font-size: 0.8rem;
+    color: var(--color-stone-light);
+    margin-bottom: 1rem;
+}
+
+.booking-submit-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: var(--color-gold);
+    color: var(--color-dark);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.booking-submit-btn:hover:not(:disabled) {
+    background: #e6bc5a;
+    transform: translateY(-2px);
+}
+
+.booking-submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Contact Section */
+.booking-contact {
+    padding: 3rem 0;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.booking-contact-content {
+    text-align: center;
+}
+
+.booking-contact-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-cream);
+    margin-bottom: 0.5rem;
+}
+
+.booking-contact-content > p {
+    color: var(--color-stone-light);
+    margin-bottom: 1.5rem;
+}
+
+.booking-contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-cream);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background: var(--color-gold);
+    color: var(--color-dark);
+    border-color: var(--color-gold);
+}
+
+/* Success Modal */
+.booking-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.booking-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.booking-modal-content {
+    background: var(--color-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 400px;
+    margin: 1rem;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.booking-modal.active .booking-modal-content {
+    transform: scale(1);
+}
+
+.modal-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.modal-icon.success {
+    background: rgba(74, 222, 128, 0.15);
+    color: #4ade80;
+}
+
+.booking-modal-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-cream);
+    margin-bottom: 0.75rem;
+}
+
+.booking-modal-content p {
+    color: var(--color-stone-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.modal-close-btn {
+    padding: 0.75rem 2rem;
+    background: var(--color-gold);
+    color: var(--color-dark);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-close-btn:hover {
+    background: #e6bc5a;
+}
+
+/* Booking page specific */
+.booking-page {
+    padding-top: 80px;
+}
+
+.booking-page .navbar {
+    background: var(--color-dark);
+}
+
+>>>>>>> 7af4f1026498e1dff10f5dc1130fce15aec1ea72
 =======
 /* ============================================
    RANČ LIPANJ 850 - Booking Page Styles
