@@ -166,6 +166,10 @@ const upload = multer({
 // REZERVACIJE API
 // ============================================
 
+app.get("/", (req, res) => {
+    res.send("API is running 🚀");
+  });
+
 app.get('/api/reservations', (req, res) => {
     try {
         const { status, service } = req.query;
