@@ -560,4 +560,4 @@ async function startServer() {
 
 startServer().catch(console.error);
 
-module.exports = app;
+
